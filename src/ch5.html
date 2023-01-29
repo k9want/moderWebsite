@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--    <link rel="stylesheet" href="grid-guide.css">-->
     <link rel="stylesheet" href="style5.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/590332cbda.js" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#menubtn").click(function () {
+                $("#menu").slideToggle();
+            });
+        });
+    </script>
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +29,11 @@
             </div>
         </div>
         <div class="box2">
-            <nav class="menu">
+            <button type="button" id="menubtn">
+                <i class="fa fa-bars"></i><span>MENU</span>
+            </button>
+
+            <nav class="menu" id="menu">
                 <ul>
                     <li><a href="#">메인</a></li>
                     <li><a href="#">연혁</a></li>
@@ -33,13 +46,18 @@
     </div>
 </div>
 <div class="box3">
-    <img src="img/header.jpg" alt="" class="topimg">
+    <div class="top">
+        <img src="img/header.jpg" alt="" class="topimg">
+        <p class="catch">TimeSwitch는 데이터 축적과<br>
+            분석/해석 서비스를 제공합니다.</p>
+    </div>
+
 </div>
 
 <div class="box6">
     <div class="box6-1">
         <div class="summary">
-            <i class="fa-database"></i>
+            <i class="fa fa-database"></i>
             <a href="#">
                 <h1>데이터 분석 해석</h1>
                 <p>목적에 맞는 다양한 각도로<br>
@@ -49,7 +67,7 @@
     </div>
     <div class="box6-2">
         <div class="summary">
-            <i class="fa-bar-chart-o"></i>
+            <i class="fa fa-bar-chart-o"></i>
             <a href="#">
                 <h1>데이터 시각화</h1>
                 <p>해석 결과는 데이터 시각화해서<br>
@@ -59,7 +77,7 @@
     </div>
     <div class="box6-3">
         <div class="summary">
-            <i class="fa-envelope"></i>
+            <i class="fa fa-envelope"></i>
             <a href="#">
                 <h1>24시간 지원</h1>
                 <p>24시간 대응 팀으로<br>

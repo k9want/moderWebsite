@@ -20,42 +20,31 @@ body {
     border: none;
 }
 
-/* 내비게이션 */
-.menu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: #000;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.menu li a:hover {
-    background-color: #000;
-}
-
-.menu ul:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.menu li {
-    float: left;
-    width: auto;
-}
-
 /* 헤더 그림 */
 .topimg {
     max-width: 100%;
     /*width: 100%;*/
     height: auto;
     vertical-align: bottom;
+}
+
+/* 캐치 카피*/
+.catch {
+    margin: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 28px;
+}
+
+/*헤더 그림에 캐치 카피를 중첩*/
+.top {
+    position: relative;
+}
+
+.catch {
+    position: absolute;
+    bottom: 7%;
+    left: 3%;
 }
 
 /*개요 */
@@ -76,6 +65,7 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 36px;
+    text-align: center;
 }
 
 .summary .fa-database {
@@ -190,6 +180,7 @@ body {
     position: relative;
     background: #ddd;
 }
+
 .follow-info:after {
     top: 100%;
     left: 50%;
@@ -270,17 +261,131 @@ body {
     padding-top: 20px;
 }
 
+/* 359이하*/
+@media (max-width: 359px) {
+    /* 사이트 이름*/
+    .site img {
+        width: 225px;
+        height: auto;
+    }
+
+}
+
+
 /* 599이하 */
 @media (max-width: 599px) {
-/* 내비게이션*/
+    /* 내비게이션*/
     .menu li a {
         padding: 10px 7px;
         font-size: 11px;
     }
+
+    /*캐치 카피*/
+    .catch {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
 }
+
+
+/* 767px 이하*/
+@media (max-width: 767px) {
+    /* 토글 버튼*/
+    #menubtn {
+        padding: 6px 12px;
+        border: solid 1px #aaaaaa;
+        border-radius: 5px;
+        background-color: #fff;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    #menubtn:hover {
+        background-color: #ddd;
+    }
+
+    #menubtn:focus {
+        outline: none;
+    }
+
+    #menubtn i {
+        color: #888888;
+        font-size: 18px;
+    }
+
+    #menubtn span {
+        display: inline-block;
+        text-indent: -9999px;
+    }
+
+    /*    내비게이션 메뉴 (세로 정렬) */
+    #menu {
+        display: none;
+    }
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 5px;
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .menu li a:hover {
+        background-color: #eeeeee;
+    }
+}
+
 
 /* 768px 이상*/
 @media (min-width: 768px) {
+    #menubtn {
+        display: none;
+    }
+
+    /* 내비게이션 */
+    #menu {
+        display: block !important;
+    }
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px 15px;
+        color: #000;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .menu li a:hover {
+        background-color: #000;
+    }
+
+    .menu ul:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .menu li {
+        float: left;
+        width: auto;
+    }
+
+
     /*Box1 Box2 가로 정렬 설정*/
     .boxA:after {
         content: '';
@@ -301,7 +406,7 @@ body {
     }
 
 
-/*    box4-1과 box4-2를 가로 정렬하는 설정*/
+    /*    box4-1과 box4-2를 가로 정렬하는 설정*/
     .box4:after {
         content: '';
         display: block;
@@ -322,7 +427,7 @@ body {
         width: 30%;
     }
 
-/*    box6-1, box6-2, box6-3을 가로 정렬하는 설정 */
+    /*    box6-1, box6-2, box6-3을 가로 정렬하는 설정 */
     .box6:after {
         content: '';
         display: block;
@@ -340,16 +445,18 @@ body {
         width: 32%;
         margin-right: 2%;
     }
+
     .box6-3 {
         float: left;
         width: 32%;
     }
 
+
 }
 
 /* 1190px 이상 */
 @media (min-width: 1190px) {
-/* 전체 너비를 고정 */
+    /* 전체 너비를 고정 */
     .box3, .box4, .boxA-inner, .box5-inner, .box6 {
         width: 1140px;
         margin: 0 auto;
@@ -359,5 +466,5 @@ body {
     /*    margin-bottom: 20px;*/
     /*    border-bottom: solid 1px #ddd;*/
     /*}*/
-    
+
 }
